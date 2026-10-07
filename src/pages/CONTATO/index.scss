@@ -1,0 +1,753 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&family=Oswald:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #3a3028 0%,
+            #201b18 38%,
+            #100e0d 72%,
+            #050505 100%
+        );
+
+    color: #d8ccb5;
+
+    font-family: "Libre Baskerville", serif;
+
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.012) 0px,
+            rgba(255, 255, 255, 0.012) 1px,
+            transparent 1px,
+            transparent 5px
+        );
+
+    opacity: 0.8;
+
+    z-index: 50;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 30%,
+            rgba(0, 0, 0, 0.75) 100%
+        );
+
+    z-index: 51;
+}
+
+.contador {
+    --cor-fundo: #211714;
+
+    width: 760px;
+
+    min-height: 720px;
+
+    position: relative;
+
+    padding: 65px 60px;
+
+    isolation: isolate;
+
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--cor-fundo) 94%, #ffffff),
+            var(--cor-fundo) 45%,
+            color-mix(in srgb, var(--cor-fundo) 70%, #000000)
+        );
+
+    border: 1px solid #9b7944;
+
+    box-shadow:
+        0 0 0 4px #090807,
+        0 0 0 6px #4b3a26,
+        0 35px 90px rgba(0, 0, 0, 0.9),
+        inset 0 0 80px rgba(0, 0, 0, 0.75),
+        inset 0 0 0 1px rgba(255, 218, 150, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        background 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+.contador::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    pointer-events: none;
+
+    border: 1px solid rgba(183, 148, 83, 0.28);
+
+    z-index: -1;
+}
+
+.contador::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 25px;
+
+    pointer-events: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.035);
+
+    z-index: -1;
+}
+
+.contador > section {
+    position: relative;
+
+    z-index: 5;
+}
+
+/* -------------------------------- */
+/* CABEÇALHO */
+/* -------------------------------- */
+
+.secao-titulo {
+    text-align: center;
+
+    padding-bottom: 40px;
+}
+
+.secao-titulo::before {
+    content: "THE PRIVATE CLUB";
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #9d8150;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    letter-spacing: 7px;
+
+    text-transform: uppercase;
+}
+
+.secao-titulo::after {
+    content: "";
+
+    display: block;
+
+    width: 220px;
+
+    height: 1px;
+
+    margin: 28px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #9c7945,
+            #d1ad6b,
+            #9c7945,
+            transparent
+        );
+}
+
+h1 {
+    margin: 0;
+
+    color: #e1d0ae;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 48px;
+
+    font-weight: 600;
+
+    letter-spacing: 6px;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        2px 3px 0 #050505,
+        0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+h1::first-letter {
+    color: #a52a32;
+}
+
+/* -------------------------------- */
+/* H2 */
+/* -------------------------------- */
+
+h2 {
+    position: relative;
+
+    margin: 30px 0 20px;
+
+    padding: 18px 30px;
+
+    color: #d6c6a7;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(79, 23, 27, 0.5),
+            rgba(79, 23, 27, 0.15),
+            transparent
+        );
+
+    border-top: 1px solid #765d39;
+
+    border-bottom: 1px solid #765d39;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        2px 2px 5px #000;
+}
+
+h2::before {
+    content: "◆";
+
+    position: absolute;
+
+    left: 3px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #9d272e;
+
+    font-size: 9px;
+}
+
+h2::after {
+    content: "◆";
+
+    position: absolute;
+
+    right: 3px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #9d272e;
+
+    font-size: 9px;
+}
+
+/* -------------------------------- */
+/* INPUTS */
+/* -------------------------------- */
+
+input[type="text"] {
+    width: 90%;
+
+    height: 52px;
+
+    padding: 0 18px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0b0b0a,
+            #171614,
+            #0b0b0a
+        );
+
+    color: #ded2bc;
+
+    border: 1px solid #705a38;
+
+    outline: none;
+
+    border-radius: 0;
+
+    font-family: "Libre Baskerville", serif;
+
+    font-size: 14px;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 0, 0, 0.8),
+        0 5px 20px rgba(0, 0, 0, 0.25);
+
+    transition:
+        0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #6f695e;
+}
+
+input[type="text"]:hover {
+    border-color: #a88850;
+}
+
+input[type="text"]:focus {
+    border-color: #d0ae70;
+
+    box-shadow:
+        0 0 15px rgba(190, 150, 80, 0.1),
+        inset 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+/* -------------------------------- */
+/* BOTÕES */
+/* -------------------------------- */
+
+button {
+    position: relative;
+
+    min-width: 170px;
+
+    margin-top: 22px;
+
+    padding: 14px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #391014,
+            #661d23,
+            #380e12
+        );
+
+    color: #d9c49b;
+
+    border: 1px solid #a27d48;
+
+    border-radius: 0;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 0 #080706,
+        0 12px 25px rgba(0, 0, 0, 0.5);
+
+    transition:
+        0.25s ease;
+}
+
+button::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 4px;
+
+    border: 1px solid rgba(226, 196, 138, 0.15);
+
+    pointer-events: none;
+}
+
+button:hover {
+    color: #f2dfb9;
+
+    background:
+        linear-gradient(
+            135deg,
+            #54161d,
+            #852731,
+            #4a1218
+        );
+
+    border-color: #d1ad6b;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 0 #080706,
+        0 18px 35px rgba(0, 0, 0, 0.6);
+}
+
+button:active {
+    transform:
+        translateY(2px);
+
+    box-shadow:
+        0 2px 0 #080706;
+}
+
+/* -------------------------------- */
+/* COLOR PICKER */
+/* -------------------------------- */
+
+.secao-cor {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin: 30px 0;
+}
+
+.secao-cor::before,
+.secao-cor::after {
+    content: "";
+
+    width: 100px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #80663d
+        );
+}
+
+.secao-cor::after {
+    background:
+        linear-gradient(
+            90deg,
+            #80663d,
+            transparent
+        );
+}
+
+input[type="color"] {
+    width: 72px;
+
+    height: 48px;
+
+    padding: 4px;
+
+    background: #0a0a09;
+
+    border: 1px solid #9b7946;
+
+    border-radius: 0;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.65);
+
+    transition:
+        0.3s ease;
+}
+
+input[type="color"]:hover {
+    transform:
+        scale(1.08);
+
+    border-color: #d1ae6c;
+
+    box-shadow:
+        0 0 20px rgba(205, 168, 98, 0.2);
+}
+
+/* -------------------------------- */
+/* CHECKBOX */
+/* -------------------------------- */
+
+.secao-programacao {
+    margin-top: 20px;
+
+    padding: 35px 0;
+
+    text-align: center;
+}
+
+.secao-programacao h1 {
+    font-size: 31px;
+
+    letter-spacing: 4px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+
+    width: 24px;
+
+    height: 24px;
+
+    position: relative;
+
+    margin: 15px;
+
+    background: #0b0b0a;
+
+    border: 1px solid #8b7045;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+}
+
+input[type="checkbox"]::after {
+    content: "✓";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -55%)
+        scale(0);
+
+    color: #e0c38e;
+
+    font-size: 16px;
+
+    transition:
+        0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+    background:
+        #641d24;
+
+    border-color: #c19a5c;
+}
+
+input[type="checkbox"]:checked::after {
+    transform:
+        translate(-50%, -55%)
+        scale(1);
+}
+
+/* -------------------------------- */
+/* CALCULADORA */
+/* -------------------------------- */
+
+.secao-calculadora {
+    margin-top: 30px;
+
+    padding-top: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid #705936;
+}
+
+.secao-calculadora::before {
+    content: "CONFIDENTIAL";
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #65563e;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 6px;
+}
+
+.secao-calculadora hr {
+    display: none;
+}
+
+.secao-calculadora input[type="text"] {
+    width: 38%;
+
+    margin: 5px;
+}
+
+.secao-calculadora div {
+    margin: 15px 0;
+
+    color: #a48958;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 25px;
+}
+
+.secao-calculadora h2 {
+    margin-bottom: 20px;
+}
+
+/* -------------------------------- */
+/* DETALHES DECORATIVOS */
+/* -------------------------------- */
+
+.secao-titulo,
+.secao-h2,
+.secao-cor,
+.secao-programacao,
+.secao-calculadora {
+    animation: entrada 0.8s ease both;
+}
+
+.secao-h2 {
+    animation-delay: 0.1s;
+}
+
+.secao-cor {
+    animation-delay: 0.2s;
+}
+
+.secao-programacao {
+    animation-delay: 0.3s;
+}
+
+.secao-calculadora {
+    animation-delay: 0.4s;
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+/* -------------------------------- */
+/* RESPONSIVO */
+/* -------------------------------- */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 30px 15px;
+
+        align-items: flex-start;
+    }
+
+    .contador {
+        width: 95%;
+
+        min-height: auto;
+
+        padding: 50px 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+
+        letter-spacing: 4px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .contador {
+        padding: 40px 18px;
+    }
+
+    h1 {
+        font-size: 31px;
+
+        letter-spacing: 3px;
+    }
+
+    h2 {
+        font-size: 17px;
+
+        padding: 15px;
+    }
+
+    .secao-calculadora input[type="text"] {
+        width: 100%;
+
+        margin: 7px 0;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    .secao-cor::before,
+    .secao-cor::after {
+        width: 50px;
+    }
+}
